@@ -1,5 +1,3 @@
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 import sequelize from '../config/sequelize.ts';
 const { Sequelize, Op, DataTypes, Model } = require('sequelize');
 
