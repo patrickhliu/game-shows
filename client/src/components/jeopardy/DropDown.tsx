@@ -1,17 +1,13 @@
 //import React, { useCallback, useState, useEffect, useRef } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-
-interface Episode {
-  show_no: string,
-  air_date: string,
-}
+import type { Episode } from '../../interfaces/jeopardy.ts';
 
 interface Args {
    label: string,
    episodes: Episode[],
    sendToParent: (x:string) => void,
-   sendShowNo: (x:string) => void,
+   sendShowNo: (episode: Episode) => void,
 }
 
 const DropDown:React.FC<Args> = ({ label, episodes, sendToParent, sendShowNo, }) => {
@@ -21,7 +17,7 @@ const DropDown:React.FC<Args> = ({ label, episodes, sendToParent, sendShowNo, })
             {
                 episodes.map((e, index) => {
                     return (
-                        <Dropdown.Item className="text-center" key={ index } onClick={ () => { sendShowNo(e.show_no) }}>{ e.air_date}</Dropdown.Item>
+                        <Dropdown.Item className="text-center" key={ index } onClick={ () => { sendShowNo(e) }}>{ e.air_date}</Dropdown.Item>
                     );
                 })
             }

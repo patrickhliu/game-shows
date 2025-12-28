@@ -5,10 +5,6 @@ import { Sequelize, DataTypes, Model } from 'sequelize';
 import * as _ from 'lodash-es';
 
 export const getYears = async(req:any, res:any) => {
-    //console.log('test...');
-    //res.status(200).json("pat123...");
-    //return;
-
     try {
         let dbResults:any = await Jeopardy.findAll({
             //limit:10,
@@ -19,8 +15,6 @@ export const getYears = async(req:any, res:any) => {
                 ['air_year', 'DESC']
             ],
         });
-
-        //console.log(dbResults);
 
         const years = _.map(dbResults, 'air_year');
 
@@ -37,8 +31,6 @@ export const getYears = async(req:any, res:any) => {
 }
 
 export const getEpisodes = async(req:any, res:any) => {
-    console.log(req.params.year);
-
     let dbResults:any = await Jeopardy.findAll({
         //limit:10,
         where: {

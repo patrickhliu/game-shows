@@ -1,10 +1,42 @@
-.jeopardy {
-    border:1px solid red;
+.jeopardy-menu {
+    border:2px solid #111;
     position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
     gap: 15px;
+    padding:10px;
+    background-color: #111;
+    border-radius: 12px;
+}
 
+.jeopardy-grid {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 0 20px 0 20px;
+
+    .category {
+        padding:10px;
+        margin: 15px 0 15px 0;
+        /* border:1px solid yellow; */
+        background-color: #060CE9;
+        color:#fff;
+        border-radius: 15px;
+        font-size:12pt;
+    }
+
+    .question {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:100px;
+        padding:15px;
+        border:1px solid #111;
+        border-radius: 15px;
+        background-color: #060CE9;
+        color:yellow;
+        font-size:18pt;
+    }
 }

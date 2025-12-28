@@ -12,5 +12,12 @@ export interface QuestionList {
   currentRound: number;
   gridArr: any;
   gridNumbers: any;
+  colorGridNumbers: any;
+  changeColorGridNumbers:any;
   showQuestion: any;
+}
+
+export interface Episode {
+  show_no: string,
+  air_date: string,
 }

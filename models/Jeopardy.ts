@@ -83,6 +83,6 @@ Jeopardy.init(
 );
 
 // the defined model is the class itself
-//console.log(NintendoGame === sequelize.models.NintendoGame); // true
+//console.log(Jeopardy === sequelize.models.Jeopardy); // true
 
 export default Jeopardy;
