@@ -1,5 +1,5 @@
-import sequelize from '../config/sequelize.ts';
-const { Sequelize, Op, DataTypes, Model } = require('sequelize');
+import sequelize from '../config/db.ts';
+import { Sequelize, DataTypes, Model } from 'sequelize';
 
 class Jeopardy extends Model {}
 
