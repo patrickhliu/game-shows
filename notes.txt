@@ -1,0 +1,10 @@
+Fresh Clone...
+- go to "/client"
+    - run "npm i"
+    - run "npm run build"
+
+- go to "root"
+    - run "npm i"
+    - run "node server.ts"
+
+- open browser to localhost:8080
