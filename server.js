@@ -21,11 +21,11 @@ app.use(express.static(reactPath));
 
 app.use('/', routes);
 
-app.get('/', (req:any, res:any) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
 });
 
-app.get('*all', (req:any, res:any) => {
+app.get('*all', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
 });
 
