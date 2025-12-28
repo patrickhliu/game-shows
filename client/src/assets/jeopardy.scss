@@ -1,0 +1,10 @@
+.jeopardy {
+    border:1px solid red;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 15px;
+
+}

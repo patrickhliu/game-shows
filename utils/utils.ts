@@ -1,7 +1,7 @@
 import winston from 'winston';
 import { createLogger, transports, format } from 'winston';
 
-const logger = createLogger({
+export const logger = createLogger({
   level: 'info', // Default log level
   format: format.combine(
     format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
@@ -21,4 +21,16 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-export default logger;
+export function getFormattedDate(date:Date) {
+  var year = date.getFullYear();
+
+  var month = (1 + date.getMonth()).toString();
+  month = month.length > 1 ? month : '0' + month;
+
+  var day = date.getDate().toString();
+  day = day.length > 1 ? day : '0' + day;
+
+  return month + '/' + day + '/' + year;
+}
+
+export default { logger, getFormattedDate };
