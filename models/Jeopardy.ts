@@ -12,206 +12,66 @@ Jeopardy.init(
         primaryKey: true,
         autoIncrement: true
     },
-    nsuid:  {
+    round:  {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    title: {
+    show_no: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    content_rating: {
+    category: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    content_rating_system: {
+    is_daily_double: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+    },
+    is_music: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+    },
+    is_video: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+    },
+    value: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+    value_copy: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+    value_dd: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+    },
+    question: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    regular_price: {
-        type: DataTypes.DECIMAL,
-        allowNull: true,
-    },
-    final_price: {
-        type: DataTypes.DECIMAL,
-        allowNull: true,
-    },
-    sale_price: {
-        type: DataTypes.DECIMAL,
-        allowNull: true,
-    },
-    amount_off: {
-        type: DataTypes.DECIMAL,
-        allowNull: true,
-    },
-    percent_off: {
-        type: DataTypes.DECIMAL,
-        allowNull: true,
-    },
-    price_range: {
+    answer: {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    discount_price_end: {
+    air_date: {
         type: DataTypes.DATE,
         allowNull: true,
     },
-    discount_price_end_timestamp: {
-        type: DataTypes.BIGINT,
+    air_year: {
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
-    platform_code: {
-        type: DataTypes.STRING,
+    air_month: {
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
-    product_image: {
-        type: DataTypes.STRING,
+    air_day: {
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
-    product_image_square: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    product_gallery: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    release_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    sku: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    top_level_filters: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    url: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    url_key: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    demo_nsuid: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    dlc_type: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    has_dlc: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    editions: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    is_upgrade: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    is_exclusive: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    is_featured: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    is_shovelware: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    availability: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    software_developer: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    software_publisher: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    franchises: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    created_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    updated_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    nintendo_updated_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    content_descriptors: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    player_count: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    play_modes: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    tag_labels: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    top_level_category: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    top_level_category_code: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    visible_in_search: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-    },
-    genres: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    game_genre_labels: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    game_feature_labels: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    nso_features: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    ways_to_play_labels: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    },
-    file_size: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    /* walmart: {
-        type: DataTypes.JSON,
-        allowNull: true,
-    } */
   },
   {
     // Other model options go here

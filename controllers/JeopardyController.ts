@@ -5,31 +5,33 @@ import { Sequelize, DataTypes, Model } from 'sequelize';
 import * as _ from 'lodash-es';
 
 export const helloWorld = async(req:any, res:any) => {
+    //console.log('test...');
+    //res.status(200).json("pat123...");
+    //return;
+
     try {
         let dbResults:any = await Jeopardy.findAll({
-        //limit:10,
-        attributes: [
-            [Sequelize.fn('DISTINCT', Sequelize.col('air_year')), 'air_year']
-        ],
-        order: [
-            ['air_year', 'DESC']
-        ],
-    });
+            //limit:10,
+            attributes: [
+                [Sequelize.fn('DISTINCT', Sequelize.col('air_year')), 'air_year']
+            ],
+            order: [
+                ['air_year', 'DESC']
+            ],
+        });
 
-    const years = _.map(dbResults, 'air_year');
+        //console.log(dbResults);
 
-    let output = {
-        years: years
-    };
+        const years = _.map(dbResults, 'air_year');
 
-    return new Response(JSON.stringify(output), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' }
-    });
+        let output = {
+            years: years
+        };
+
+        res.status(200).json(output);
     } catch (error) {
         //console.error("Error fetching data:", error);
         console.log("error: " + error);
         logger.info("error: " + error);
     }
-
 }

@@ -5,6 +5,11 @@ Fresh Clone...
 
 - go to "root"
     - run "npm i"
-    - run "node server.ts"
+    - run "nodemon server.ts"
 
 - open browser to localhost:8080
+
+nodemon...
+    - this is when you want code changes to automatically be monitored/refreshed, install this into your local system
+    - npm install -g nodemon
+    - npm install -g ts-node
